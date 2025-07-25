@@ -1,0 +1,9 @@
+<div class="front-page">
+    @if (isLoading()) {
+    } @else if (hasError()) {
+        <p class="error">Unable to load content. Please try again later.</p>
+    }
+    @for (ribbon of visibleRibbons(); track ribbon.header) {
+        <app-media-category-timeline [data]="ribbon.data" [title]="ribbon.header"/>
+    }
+</div>

@@ -1,0 +1,43 @@
+:root {
+  --main-bg: #fdfaf6;
+  --main-color: #1a1a1a;
+
+  /* Typography */
+  --ribbon-title-font-size: 1.5rem;
+  --ribbon-title-padding: 1rem 1rem 1rem 2rem;
+  --font-size-base: 16px;
+  --font-family-base: 'Roboto Thin', sans-serif;
+
+  /* Layout */
+  --ribbon-gap: 0.5rem;
+  --ribbon-padding: 1rem 1rem 1rem 2rem;
+  --ribbon-scroll-padding-inline: 2rem;
+
+  /* Widths */
+  --ribbon-left-padding: 64px; /* 48px + 16px spacing */
+  --arrow-width: 5rem;
+
+  /* Breakpoints */
+  --ribbon-break-7: 7.25;
+  --ribbon-break-6: 6.25;
+  --ribbon-break-4: 4.25;
+  --ribbon-break-3: 3.25;
+  --ribbon-break-2: 2.25;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--main-bg);
+  color: var(--main-color);
+  line-height: 1.5;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+}

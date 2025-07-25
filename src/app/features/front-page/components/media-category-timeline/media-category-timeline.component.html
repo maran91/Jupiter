@@ -1,0 +1,57 @@
+<div class="ribbon">
+  <h2 class="ribbon__title">{{ title() }}</h2>
+
+  <div class="ribbon__container">
+    @if (canScrollLeft()) {
+      <div
+        class="ribbon__arrow ribbon__arrow--left"
+        (click)="scrollLeft()"
+        role="button"
+        aria-label="Scroll left"
+      >
+        <svg
+          class="ribbon__arrow-icon ribbon__arrow-icon--flipped"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          aria-hidden="true"
+        >
+          <path
+            d="M15.88945 5.50875c-1.0356.82693-1.20475 2.33681-.37782 3.3724a2.397 2.397 0 00.01146.01424l12.2507 15.10455-12.25067 15.10452c-.83483 1.0293-.67718 2.54048.35212 3.3753a2.39993 2.39993 0 00.0142.01143c1.04583.83514 2.5695.67033 3.41256-.36913l13.6762-16.86229c.59557-.7343.59557-1.78535 0-2.51966L19.30198 5.8779c-.84305-1.03945-2.3667-1.20427-3.41253-.36916z"
+            fill="white"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    }
+
+    <div #track aria-label="Ribbon content" class="ribbon__track" role="region">
+      @for (item of data(); track item.id) {
+        <app-front-page-media [item]="item"/>
+      }
+    </div>
+
+    @if (canScrollRight()) {
+      <div
+        class="ribbon__arrow ribbon__arrow--right"
+        (click)="scrollRight()"
+        role="button"
+        aria-label="Scroll right"
+      >
+        <svg
+          class="ribbon__arrow-icon"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          aria-hidden="true"
+        >
+          <path
+            d="M15.88945 5.50875c-1.0356.82693-1.20475 2.33681-.37782 3.3724a2.397 2.397 0 00.01146.01424l12.2507 15.10455-12.25067 15.10452c-.83483 1.0293-.67718 2.54048.35212 3.3753a2.39993 2.39993 0 00.0142.01143c1.04583.83514 2.5695.67033 3.41256-.36913l13.6762-16.86229c.59557-.7343.59557-1.78535 0-2.51966L19.30198 5.8779c-.84305-1.03945-2.3667-1.20427-3.41253-.36916z"
+            fill="white"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    }
+  </div>
+</div>

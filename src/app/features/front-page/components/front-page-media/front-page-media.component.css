@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
